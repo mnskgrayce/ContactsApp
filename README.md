@@ -1,58 +1,43 @@
-ContactsApp (Java SE 11.0.4)
+# ContactsApp (Java SE 11.0.4)
 
-simple Contacts Management app
+A simple Contacts Management app.
 
-/*
+----- RMIT University Vietnam -----<br> 
+**Course:** INTE2512 Object-Oriented Programming<br> 
+**Semester:** 2019C<br> 
+**Assessment:** Assignment 1<br> 
+**Student Name:** Nguyen Minh Trang<br> 
+**Student ID:** 3751450<br> 
 
-RMIT University Vietnam
+## 1. Introduction
+- This CLI program provides functions to manage a contact list
+- Users can import data from a text file, or manually add to the list
+- Users can also export list to a file, which overwrites the old file
 
-Course: INTE2512 Object-Oriented Programming
+## 2. Functions
+- Create an empty contact list at launch and free it upon exit
+- Store all contacts by separate data fields: (name/number/email/address)
+- Run indefinitely until prompted quit
+- Fault-tolerance: display error messages upon bad console input and let user enter again until valid
+- Duplicate detection and removal during adding new contacts and editing existing contacts
+- Load contacts from a text file: read file by line and add its content to list
+- **View all contacts:** display all contacts in the list
+- **Add new contact:** add a new contact to bottom of list
+- **Edit a contact:** edit a contact by selected index and field (name/number/email/address)
+- **Delete a contact:** delete a contact by selected index from list
+- Search the contact list by a given string and display all matching results
+- Sort contact list by one of given fields (name/number/email/address) in ascending/alphabetical order
+- Save contacts to a text file: overwrite by formatted line to file
 
-Semester: 2019C
+## 3. Installation
+1. Have the files `ContactsApp.java`, `ContactListManager.java`, `Contact.java`, and `contacts.txt` in the same project directory
+2. Compile and run ContactsApp.class
 
-Assessment: Assignment 1
+## 4. Known Bugs
+- Program cannot handle bad data when reading from file (POSSIBLE WORKAROUND: skip bad line or fill invalid/unavailable fields with dummy value - NOT IMPLEMENTED)
+- Sometimes program freezes while taking input (WORKAROUND: keep pressing Enter; if error message appears just re-enter input until program recovers)
 
-Student Name: Nguyen Minh Trang
-
-Student ID: 3751450
-
-*/
-
-
-	1	INTRODUCTION
-This Java CLI program provides functions to manage a contact list in-memory
-
-User can import data from a text file, or manually add to the list
-
-User can also export list to a file, which overwrites the file
-
-	2	FEATURES
-	•	Create an empty contact list at launch and free it upon exit
-	•	Store all contacts by separate data fields: (name/number/email/address)
-	•	Run indefinitely until prompted Quit
-	•	Fault-tolerance: display error messages upon bad console input and let user enter again until valid
-	•	Duplicate detection and removal during adding new contacts and editing existing contacts
-	•	Load contacts from a text file: read file by line and add its content to list
-	•	View all contacts: display all contacts in the list
-	•	Add new contact: add a new contact to bottom of list
-	•	Edit a contact: edit a contact by selected index and field (name/number/email/address)
-	•	Delete a contact: delete a contact by selected index from list
-	•	Search the contact list by a given string and display all matching results
-	•	Sort contact list by one of given fields (name/number/email/address) in ascending/alphabetical order
-	•	Save contacts to a text file: overwrite by formatted line to file
-
-	3	INSTALLATION
-Have classes ContactsApp.java, ContactListManager.java and Contact.java and text file "contacts" in the same project directory
-
-Compile and run ContactsApp.class
-
-	4	KNOWN BUGS
-Program cannot handle bad data when reading from file (POSSIBLE WORKAROUND: skip bad line or fill invalid/unavailable fields with dummy value - NOT IMPLEMENTED)
-
-Sometimes program freezes while taking input (WORKAROUND: keep pressing Enter; if error message appears just re-enter input until program recovers) 
-
-	5	REFERENCES
-
+## 5. References
 [1] Stack Overflow, 28 Sep 2009. [Online]. Available: https://stackoverflow.com/questions/1486077/good-way-to-encapsulate-integer-parseint. [Accessed 17 Nov 2019].
 
 [2] L. Gupta, "Java email validation using regex," 2015. [Online]. Available: https://howtodoinjava.com/regex/java-regex-validate-email-address/. [Accessed 17 Nov 2019].
@@ -72,4 +57,3 @@ Sometimes program freezes while taking input (WORKAROUND: keep pressing Enter; i
 [9] Oracle Corporation, "String (Java SE 11 & JDK 11)," [Online]. Available: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#split(java.lang.String). [Accessed 17 Nov 2019].
 
 [10] D. Y. Liang, Introduction to Java Programming, Comprehensive Version, Global Edition, vol. 10th ed, Pearson, Boston, chapter 10-11 & 15, 2015.
-# ContactsApp
